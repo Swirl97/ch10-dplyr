@@ -64,3 +64,12 @@ summary <- flights %>%
     min_time = min(time_gained, na.rm = T),
     max_time = max(time_gained, na.rm = T)
   )
+
+flights %>% 
+  group_by(origin) %>% 
+  summarize(avg_delay = mean(dep_delay, na.rm = T))
+
+flights %>% 
+  group_by(dest) %>% 
+  summarize(avg_arr_delay = mean(arr_delay, na.rm = T)) %>% 
+  arrange(-avg_arr_delay)
