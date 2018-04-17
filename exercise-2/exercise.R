@@ -5,7 +5,7 @@
 # Install and load the "fueleconomy" package
 #install.packages("devtools")
 #devtools::install_github("hadley/fueleconomy")
-library(fueleconomy)
+library(fueleconomy) 
 
 # Install and load the "dplyr" library
 library(dplyr)
